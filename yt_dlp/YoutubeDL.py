@@ -1069,6 +1069,8 @@ class YoutubeDL:
         If stderr is a tty file the 'WARNING:' will be colored
         """
         if self.params.get('logger') is not None:
+            if self.params.get('no_warnings'):
+                return
             self.params['logger'].warning(message)
         else:
             if self.params.get('no_warnings'):
