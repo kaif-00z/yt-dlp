@@ -1007,8 +1007,8 @@ class YoutubeDL:
         @param tb          If given, is additional traceback information
         @param is_error    Whether to raise error according to ignorerrors
         """
-        if message is not None:
-            self.to_stderr(message)
+        # if message is not None:
+        #     self.to_stderr(message)
         if self.params.get('verbose'):
             if tb is None:
                 if sys.exc_info()[0]:  # if .trouble has been called from an except block
